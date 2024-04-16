@@ -1,32 +1,30 @@
 <script>
-  import Main from './components/Main.vue';
+import appHeader from './components/appHeader.vue';
+import appMain from './components/appMain.vue';
+import appCard from './components/appCard.vue';
+import appFooter from './components/appFooter.vue';
 
-  export default {
+export default {
     components: {
-      Main
-    },
-    data() {
+        appHeader,
+        appMain,
+        appCard,
+        appFooter
     }
-  }
+}
 </script>
 
 <template>
-  <div>
-    <Main />
-  </div>
+    <div>
+        <appHeader />
+        <appMain />
+        <appFooter />
+
+    </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
+
+<style lang="scss">
+@use './assets/scss/general';
 </style>
